@@ -1,0 +1,7 @@
+<!-- Search form -->
+<div class="md-form">
+    <input name="searchText" type="search" [(ngModel)]="searchText" placeholder="Search text">
+  </div>
+  <ul *ngFor="let user of usersArray | filter: searchText">
+    <li *ngIf="searchText">{{user.first_name}} </li>
+  </ul>
